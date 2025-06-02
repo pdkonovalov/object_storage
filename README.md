@@ -1,4 +1,4 @@
-# Dead simple read-only interface for s3.
+# Example
 
 ```go
 package main
