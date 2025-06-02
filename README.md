@@ -51,7 +51,7 @@ func main() {
 	//    Path:     "",
 	//    Meta:     map[string]any{x: 1, y: 2},
 	//    Contains: ["images/", "file.txt"],
-	//    URL: my-s3-endpoint/my-bucket
+	//    URL:      "my-s3-endpoint/my-bucket"
 	// }
 
 	folder, err := s.GetObject(ctx, "images/")
@@ -64,7 +64,7 @@ func main() {
 	//    Path:     "images/",
 	//    Meta:     map[string]any{x: 1, y: 2},
 	//    Contains: ["file.png"],
-	//    URL: my-s3-endpoint/my-bucket/images/
+	//    URL:      "my-s3-endpoint/my-bucket/images/"
 	// }
 
 	single_file, err := s.GetObject(ctx, "images/file.png")
@@ -77,7 +77,7 @@ func main() {
 	//    Path:     "images/file.png",
 	//    Meta:     map[string]any{},
 	//    Contains: [],
-	//    URL: my-s3-endpoint/my-bucket/images/file.png
+	//    URL:      "my-s3-endpoint/my-bucket/images/file.png"
 	// }
 
 	single_file_body, err := s.GetObjectBody(ctx, single_file)
